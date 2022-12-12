@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bad Login</title>
+</head>
+<body bgcolor:red>
+	<h1 text-align="center"> Wrong Username/Password , Try Again!</h1>
+	<%
+    response.sendRedirect("http://localhost:8081/servletproject/login.jsp");
+%>
+<script>
+  setTimeout(function() {
+      document.location = "/next/page/to/go/to.jsp";
+  }, 100000); // <-- this is the delay in milliseconds
+</script>
+</body>
+</html>

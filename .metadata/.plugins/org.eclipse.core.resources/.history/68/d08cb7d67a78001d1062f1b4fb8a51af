@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contact Us</title>
+<style>
+h3 {
+    text-transform: uppercase;
+    font-size: 45px;
+    font-family: montserrat-bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+body {
+	background: #39459b;
+    border: 10px solid #0d99d7;
+    font-family: montserrat-regular;
+    color: #fff;
+    font-size: 15px;
+    margin: 0;
+    display:block;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+label{
+	position: relative;
+    display: block;
+    margin-bottom: 48px;
+}
+input{
+    border: none;
+    border-bottom: 2px solid #00ade6;
+    display: block;
+    width: auto;
+    height: 43px;
+    font-size: 15px;
+    background: 0 0;
+    font-family: montserrat-semibold;
+}
+</style>
+</head>
+<body>
+<h3>Contact Us</h3>
+<div id="contactform">	
+	<form  action="contactus" method="post">
+		<label>Name:<br><input type="text" name="name"></label><br><br>
+		Email:<br><input type="email" name="email" ><br><br>
+		Message:<br><input type="text"  name="message"><br><br>
+		<input type="Submit">
+	</form>
+</div>
+</body>
+</html>

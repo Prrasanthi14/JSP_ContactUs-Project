@@ -1,0 +1,82 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contact Us</title>
+<link rel="stylesheet" type="text/css" href="contactus.css">
+<style>
+h{
+	color: #4B56D2;
+}
+
+p{
+	margin-top: .4rem;
+	opacity: .7;
+}
+
+#contactform{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: 5rem 20rem 10rem;
+	background-color: #62B6B7;
+}
+
+#name{
+	margin: 2rem 15rem 4rem;
+	text-align: left;
+}
+
+#email{
+	margin: 0 15rem 4rem;
+	text-align: left;
+}
+
+#message{
+	margin: 0 15rem 2rem;
+	text-align: left;
+}
+
+#submit{
+	margin: 0 15rem 2rem;
+}
+
+.submit{
+	padding: 1rem 1.5rem;
+	font-size: 1rem;
+}
+</style>
+</head>
+<body>
+	<div id="contactform">
+		<h1>Contact Us</h1>	
+		<form  action="contactus" method="post">
+			<div id="name">
+				<label id="label">Name:</label>
+				<br>
+				<input type="text" name="name" placeholder="Enter the name" required>
+				<br>
+			</div>
+			<div id="email">
+				<br>
+				<label id="label">Email:</label>
+				<br>
+				<input type="email" name="email" placeholder="Enter the email id" required>
+				<p>example.example.com</p>
+			</div>
+			<div id="message">
+				<br>
+				<label id="label">Message:</label>
+				<br>
+				<textarea  name="message" rows="15" cols="40" placeholder="Enter your message" required></textarea>
+				<br>
+			</div>
+			<div id="submit">
+				<input type="Submit" class="submit">
+			</div>	
+		</form>
+	</div>
+</body>
+</html>

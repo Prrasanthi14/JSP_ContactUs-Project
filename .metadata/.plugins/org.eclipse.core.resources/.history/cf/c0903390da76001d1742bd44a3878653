@@ -1,0 +1,22 @@
+package com.contactusservletproject;
+
+import java.io.PrintWriter;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/contactus")
+public class ContactUsServlet {
+	
+	public void doGet(HttpServletRequest request,HttpServletResponse resposnse){
+		
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String message = request.getParameter("message");
+		
+		PrintWriter out = new PrintWriter(System.out);    ;
+		out.print ("Data received");
+	}
+}
+servlet

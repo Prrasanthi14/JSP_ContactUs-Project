@@ -1,0 +1,24 @@
+package com.contactusservletproject;
+
+public class Request {
+
+	String name,email,message;
+	
+	public static void main(String args[]) {
+		
+		
+	}
+}
+
+class RequestDao{
+	
+	public Request getRequest(String name, String email, String message) {
+		
+		Request request=new Request();
+		request.name=name;
+		request.email=email;
+		request.message=message;
+		
+		return request;
+	}
+}

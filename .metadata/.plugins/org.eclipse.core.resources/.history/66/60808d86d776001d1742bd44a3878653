@@ -1,0 +1,16 @@
+package com.contactusservletproject;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+public class ContactUsServlet {
+	
+	public void doGet(HttpServletRequest request,HttpServletResponse resposnse){
+		
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String message = request.getParameter("message");
+		
+	}
+}

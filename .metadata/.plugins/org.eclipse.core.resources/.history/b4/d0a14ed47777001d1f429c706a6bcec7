@@ -1,0 +1,10 @@
+package com.contactusservletproject;
+
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet("/dashboard")
+public class DashboardServlet {
+	
+	
+	
+}

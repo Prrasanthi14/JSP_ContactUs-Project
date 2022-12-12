@@ -1,0 +1,51 @@
+package com.contactusservletproject;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class RequestDao {
+	
+	String url="jdbc:postgresql://localhost:5432/postgres";
+	String username= "postgres";
+	String password="postgres";
+	public void requestDao(Request requestobj) throws ClassNotFoundException, SQLException {
+		
+		String name = requestobj.getName();
+		String email = requestobj.getEmail();
+		String message = requestobj.getMessage();
+		
+		
+	
+		String sql ="insert into requests (fullname,email,message,status) values ('"+name+"','"+email+"','"+message+"','active');";
+		Class.forName("org.postgresql.Driver");
+		Connection con= DriverManager.getConnection(url,username,password);
+		Statement st=con.createStatement();
+		 st.executeQuery(sql); 
+		
+	}
+	
+	public void fetchRequests(Request requestobj) throws ClassNotFoundException, SQLException {
+		
+	
+		String query ="select * from requests;";
+		Class.forName("org.postgresql.Driver");
+		Connection connection= DriverManager.getConnection(url,username,password);
+		Statement statement=connection.createStatement();
+		
+		 ResultSet resultSet=statement.executeQuery(query);
+		 List<Request> list=new ArrayList<Request>();
+		 
+			while(resultSet.next()) {
+				Request requestdata=new Request();
+				requestdata.setName(resultSet.getString(1));
+				requestdata.setEmail(resultSet.getString(2));
+				requestdata.setMessage(resultSet.getString(3));
+				requestdata.setTime(resultSet.getString(4));
+				requestdata.setStatus(resultset.getString(5));
+				list.add(requestdata);
+			}
+			}
+		
+	}
+

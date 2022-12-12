@@ -1,0 +1,27 @@
+package com.contactusservletproject;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/dashboard")
+public class DashboardServlet {
+	
+	public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException, ServletException, ClassNotFoundException, SQLException{
+		
+		
+		RequestDao requestdao=new RequestDao();
+		List<Request> requestlist=requestdao.fetchRequests();
+		
+		RequestDispatcher dispatcher=request.getRequestDispatcher("dashboard.jsp");
+		dispatcher.forward(request, response);
+		
+		}
+	
+}

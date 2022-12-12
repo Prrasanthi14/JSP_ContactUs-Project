@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contact Us</title>
+<!--link rel="stylesheet" href="index.css" -->
+<style>
+body {
+    font-family: montserrat-regular;
+    color: #fff;
+    font-size: 15px;
+    margin: 0;
+}
+</style>
+</head>
+<body>
+<h1 text-align="center">Contact Us</h1>
+<div id="contactform">	
+	<form  action="contactus" method="post">
+		Name:<br><input type="text" name="name"><br><br>
+		Email:<br><input type="email" name="email" ><br><br>
+		Message:<br><input type="text"  name="message"><br><br>
+		<input type="Submit">
+	</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+package com.contactusservletproject;
+
+import java.sql.*;
+
+public class RequestDao {
+	
+	String url="jdbc:postgresql://localhost:5432/postgres";
+	String username= "postgres";
+	String password="postgres";
+	public void requestDao(Request requestobj) throws ClassNotFoundException, SQLException {
+		
+		String name = requestobj.getName();
+		String email = requestobj.getEmail();
+		String message = requestobj.getMessage();
+		
+		
+	
+		String sql ="insert into requests values ('"+name+"','"+email+"','"+message+"')";
+		Class.forName("org.postgresql.Driver");
+		Connection con= DriverManager.getConnection(url,username,password);
+		Statement st=con.createStatement();
+		 st.executeQuery(sql); 
+		
+	}
+	
+	public void fetchRequests(Request requestobj) throws ClassNotFoundException, SQLException {
+		
+	
+		String query ="select * from requests;";
+		Class.forName("org.postgresql.Driver");
+		Connection connection= DriverManager.getConnection(url,username,password);
+		Statement statement=connection.createStatement();
+		
+		 ResultSet resultSet=statement.executeQuery(query);
+		 List<Request> list
+			while(resultSet.next()) {
+				
+		
+			}
+			}
+		
+	}
+}
